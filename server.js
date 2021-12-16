@@ -10,7 +10,7 @@ const methodOverride = require("method-override");
 
 //Default router
 const indexRouter = require("./routes/index");
-const scoreKingRouter = require("./routes/score-king");
+const scoreKingRouter = require("./routes/scoreking");
 const scoreKingPrivacyRouter = require("./routes/privacy");
 // const bookRouter = require("./routes/books");
 
@@ -33,8 +33,8 @@ app.use(express.urlencoded({ limit: "10mb", extended: true }));
 
 //Route to default router
 app.use("/", indexRouter);
-app.use("/score-king", scoreKingRouter);
-app.use("/score-king/privacy", scoreKingPrivacyRouter);
+app.use("/scoreking", scoreKingRouter);
+app.use("/scoreking/privacy", scoreKingPrivacyRouter);
 // app.use("/books", bookRouter);
 
 app.listen(process.env.PORT || 3003);
